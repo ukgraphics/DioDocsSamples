@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GrapeCity.DioDocs.Excel.ja" Version="2.1.4" />
+    <PackageReference Include="GrapeCity.DioDocs.Pdf.ja" Version="2.1.0.265" />
+  </ItemGroup>
+
+</Project>
