@@ -17,8 +17,9 @@ namespace DDClassLibrary1
             worksheet.Range["B2"].Value = "Hello World!";
             worksheet.Range["C2"].Value = "from " + platformname;
 
-            // Excelファイルとして保存
             workbook.Save("Result.xlsx");
+
+            AzStorage.UploadAsync("Result.xlsx");
         }
     }
 }
