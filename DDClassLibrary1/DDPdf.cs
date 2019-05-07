@@ -23,9 +23,6 @@ namespace DDClassLibrary1
                 new TextFormat() { Font = StandardFonts.Times, FontSize = 12 },
                 new PointF(72, 72));
 
-            // PDFを保存します。
-            doc.Save("Result.pdf");
-
             // メモリストリームに保存
             MemoryStream ms = new MemoryStream();
             doc.Save(ms, false);
