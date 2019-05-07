@@ -24,7 +24,7 @@ namespace DDClassLibrary1
             ms.Seek(0, SeekOrigin.Begin);
 
             // BLOBストレージにアップロード
-            AzStorage.UploadAsync(ms);
+            AzStorage.UploadExcelAsync(ms);
         }
     }
 }
