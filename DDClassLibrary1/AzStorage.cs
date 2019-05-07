@@ -10,8 +10,7 @@ namespace DDClassLibrary1
 {
     class AzStorage
     {
-
-        public static async void UploadAsync(string uploadfilename)
+        public static async void UploadAsync(MemoryStream uploadstream)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
             .AddJsonFile("libsettings.json", optional: true)
@@ -31,8 +30,7 @@ namespace DDClassLibrary1
             // Use the value of localFileName for the blob name.
             CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference("Result.xlsx");
 
-            await cloudBlockBlob.UploadFromFileAsync("Result.xlsx");
+            await cloudBlockBlob.UploadFromStreamAsync(uploadstream);
         }
-            
     }
 }

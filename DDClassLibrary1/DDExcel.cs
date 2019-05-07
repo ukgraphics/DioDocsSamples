@@ -1,5 +1,6 @@
 ﻿using GrapeCity.Documents.Excel;
 using System;
+using System.IO;
 
 namespace DDClassLibrary1
 {
@@ -17,9 +18,13 @@ namespace DDClassLibrary1
             worksheet.Range["B2"].Value = "Hello World!";
             worksheet.Range["C2"].Value = "from " + platformname;
 
-            workbook.Save("Result.xlsx");
+            // メモリストリームに保存
+            MemoryStream ms = new MemoryStream();
+            workbook.Save(ms, SaveFileFormat.Xlsx);
+            ms.Seek(0, SeekOrigin.Begin);
 
-            AzStorage.UploadAsync("Result.xlsx");
+            // BLOBストレージにアップロード
+            AzStorage.UploadAsync(ms);
         }
     }
 }
