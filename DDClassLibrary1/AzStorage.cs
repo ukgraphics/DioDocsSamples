@@ -17,6 +17,10 @@ namespace DDClassLibrary1
             .Build();
 
             string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
+            // Emulator
+            //string storageConnectionString = configuration["AzureBlobStorage:EmulatorConnectionString"];
+
+
             CloudStorageAccount storageAccount;
             CloudStorageAccount.TryParse(storageConnectionString, out storageAccount);
 
