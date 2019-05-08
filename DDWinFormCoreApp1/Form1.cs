@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DDClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace DDWinFormCoreApp1
         public Form1()
         {
             InitializeComponent();
+
+            DDExcel.Create(".NET Core WinForms App");
+
+            DDPdf.Create(".NET Core WinForms App");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
