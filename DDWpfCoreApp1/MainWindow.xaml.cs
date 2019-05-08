@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DDClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace DDWpfCoreApp1
         public MainWindow()
         {
             InitializeComponent();
+
+            DDExcel.Create(".NET Core WPF App");
+
+            DDPdf.Create(".NET Core WPF App");
         }
     }
 }
