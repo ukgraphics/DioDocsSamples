@@ -20,8 +20,6 @@ namespace DDAspNetCoreApp1.Pages
 
         public IActionResult OnPost()
         {
-            Console.WriteLine($"入力された名前は：{Name} です。");
-
             DDExcel.Create(Name);
 
             DDPdf.Create(Name);
