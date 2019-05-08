@@ -15,7 +15,7 @@ namespace DDClassLibrary1
             IConfigurationRoot configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("libsettings.json", optional: true)
-            .AddJsonFile("../libsettings.json", optional: true)
+            .AddJsonFile("../libsettings.json", optional: true) // for Azure Functions
             .Build();
 
             string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
@@ -43,7 +43,7 @@ namespace DDClassLibrary1
             IConfigurationRoot configuration = new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("libsettings.json", optional: true)
-            .AddJsonFile("../libsettings.json", optional: true)
+            .AddJsonFile("../libsettings.json", optional: true) // for Azure Functions
             .Build();
 
             string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
