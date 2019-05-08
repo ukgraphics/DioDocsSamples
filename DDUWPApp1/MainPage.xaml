@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="25,10,0,0" Text="UWP App" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" FontFamily="Segoe UI"/>
 
     </Grid>
 </Page>

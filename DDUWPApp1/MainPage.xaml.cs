@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DDClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,10 @@ namespace DDUWPApp1
         public MainPage()
         {
             this.InitializeComponent();
+
+            DDExcel.Create("UWP App");
+
+            DDPdf.Create("UWP App");
         }
     }
 }
