@@ -13,7 +13,9 @@ namespace DDClassLibrary1
         public static async void UploadExcelAsync(MemoryStream uploadstream)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("libsettings.json", optional: true)
+            .AddJsonFile("../libsettings.json", optional: true)
             .Build();
 
             string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
@@ -39,7 +41,9 @@ namespace DDClassLibrary1
         public static async void UploadPdfAsync(MemoryStream uploadstream)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("libsettings.json", optional: true)
+            .AddJsonFile("../libsettings.json", optional: true)
             .Build();
 
             string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
