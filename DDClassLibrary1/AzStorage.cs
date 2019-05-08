@@ -16,6 +16,7 @@ namespace DDClassLibrary1
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("libsettings.json", optional: true)
             .AddJsonFile("../libsettings.json", optional: true) // for Azure Functions
+            .AddJsonFile("./bin/Debug/netcoreapp3.0/libsettings.json", optional: true) // for ASP.NET Core
             .Build();
 
             string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
@@ -44,6 +45,7 @@ namespace DDClassLibrary1
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("libsettings.json", optional: true)
             .AddJsonFile("../libsettings.json", optional: true) // for Azure Functions
+            .AddJsonFile("./bin/Debug/netcoreapp3.0/libsettings.json", optional: true) // for ASP.NET Core
             .Build();
 
             string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
