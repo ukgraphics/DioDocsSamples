@@ -1,4 +1,5 @@
-﻿using Microsoft.Azure.Storage;
+﻿using DDClassLibrary1.Properties;
+using Microsoft.Azure.Storage;
 using Microsoft.Azure.Storage.Blob;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -12,17 +13,20 @@ namespace DDClassLibrary1
     {
         public static async void UploadExcelAsync(MemoryStream uploadstream)
         {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("libsettings.json", optional: true)
-            .AddJsonFile("../libsettings.json", optional: true) // for Azure Functions
-            .AddJsonFile("./bin/Debug/netcoreapp3.0/libsettings.json", optional: true) // for ASP.NET Core
-            .Build();
+            //IConfigurationRoot configuration = new ConfigurationBuilder()
+            //.SetBasePath(Directory.GetCurrentDirectory())
+            //.AddJsonFile("libsettings.json", optional: true)
+            //.AddJsonFile("../libsettings.json", optional: true) // for Azure Functions
+            //.AddJsonFile("./bin/Debug/netcoreapp3.0/libsettings.json", optional: true) // for ASP.NET Core
+            //.Build();
 
-            string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
+            //string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
+            //// Emulator
+            ////string storageConnectionString = configuration["AzureBlobStorage:EmulatorConnectionString"];
+
+            string storageConnectionString = Resources.ResourceManager.GetString("ConnectionString");
             // Emulator
-            //string storageConnectionString = configuration["AzureBlobStorage:EmulatorConnectionString"];
-
+            //string storageConnectionString = Resources.ResourceManager.GetString("EmulatorConnectionString");
 
             CloudStorageAccount storageAccount;
             CloudStorageAccount.TryParse(storageConnectionString, out storageAccount);
@@ -41,17 +45,20 @@ namespace DDClassLibrary1
 
         public static async void UploadPdfAsync(MemoryStream uploadstream)
         {
-            IConfigurationRoot configuration = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("libsettings.json", optional: true)
-            .AddJsonFile("../libsettings.json", optional: true) // for Azure Functions
-            .AddJsonFile("./bin/Debug/netcoreapp3.0/libsettings.json", optional: true) // for ASP.NET Core
-            .Build();
+            //IConfigurationRoot configuration = new ConfigurationBuilder()
+            //.SetBasePath(Directory.GetCurrentDirectory())
+            //.AddJsonFile("libsettings.json", optional: true)
+            //.AddJsonFile("../libsettings.json", optional: true) // for Azure Functions
+            //.AddJsonFile("./bin/Debug/netcoreapp3.0/libsettings.json", optional: true) // for ASP.NET Core
+            //.Build();
 
-            string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
+            //string storageConnectionString = configuration["AzureBlobStorage:ConnectionString"];
+            //// Emulator
+            ////string storageConnectionString = configuration["AzureBlobStorage:EmulatorConnectionString"];
+
+            string storageConnectionString = Resources.ResourceManager.GetString("ConnectionString");
             // Emulator
-            //string storageConnectionString = configuration["AzureBlobStorage:EmulatorConnectionString"];
-
+            //string storageConnectionString = Resources.ResourceManager.GetString("EmulatorConnectionString");
 
             CloudStorageAccount storageAccount;
             CloudStorageAccount.TryParse(storageConnectionString, out storageAccount);
