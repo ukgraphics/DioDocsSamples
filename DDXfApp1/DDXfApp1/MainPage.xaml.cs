@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DDClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +17,10 @@ namespace DDXfApp1
         public MainPage()
         {
             InitializeComponent();
+
+            DDExcel.Create("Xamarin.Forms App");
+
+            DDPdf.Create("Xamarin.Forms App");
         }
     }
 }
