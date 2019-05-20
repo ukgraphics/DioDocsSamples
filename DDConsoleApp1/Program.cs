@@ -7,7 +7,7 @@ namespace DDConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello de:code 2019!");
 
             DDExcel.Create(".NET Core Console App");
 

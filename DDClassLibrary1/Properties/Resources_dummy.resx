@@ -123,6 +123,12 @@
   <data name="ConnectionString" xml:space="preserve">
     <value />
   </data>
+  <data name="DdExcelLicenseString" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DdPdfLicenseString" xml:space="preserve">
+    <value />
+  </data>
   <data name="EmulatorConnectionString" xml:space="preserve">
     <value />
   </data>

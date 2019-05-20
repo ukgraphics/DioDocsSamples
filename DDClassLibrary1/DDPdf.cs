@@ -1,4 +1,5 @@
-﻿using GrapeCity.Documents.Pdf;
+﻿using DDClassLibrary1.Properties;
+using GrapeCity.Documents.Pdf;
 using GrapeCity.Documents.Text;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,10 @@ namespace DDClassLibrary1
     {
         public static void Create(string platformname)
         {
+            // トライアル用
+            string key = Resources.ResourceManager.GetString("DdPdfLicenseString");
+            GcPdfDocument.SetLicenseKey(key);
+
             // PDFドキュメントを作成します。
             GcPdfDocument doc = new GcPdfDocument();
 
@@ -19,7 +24,7 @@ namespace DDClassLibrary1
             GcPdfGraphics g = doc.NewPage().Graphics;
 
             // ページに文字列を描画します。
-            g.DrawString("Hello, World!" + Environment.NewLine + "from " + platformname,
+            g.DrawString("Hello, de:code 2019!" + Environment.NewLine + "from " + platformname,
                 new TextFormat() { Font = StandardFonts.Times, FontSize = 12 },
                 new PointF(72, 72));
 

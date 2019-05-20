@@ -13,8 +13,8 @@ namespace DDClassLibrary1
     {
         public static async void UploadExcelAsync(MemoryStream uploadstream)
         {
-            string storageConnectionString = Resources.ResourceManager.GetString("ConnectionString");
-            //string storageConnectionString = Resources.ResourceManager.GetString("EmulatorConnectionString"); // for Emulator
+            //string storageConnectionString = Resources.ResourceManager.GetString("ConnectionString");
+            string storageConnectionString = Resources.ResourceManager.GetString("EmulatorConnectionString"); // for Emulator
 
             CloudStorageAccount storageAccount;
             CloudStorageAccount.TryParse(storageConnectionString, out storageAccount);
@@ -33,8 +33,8 @@ namespace DDClassLibrary1
 
         public static async void UploadPdfAsync(MemoryStream uploadstream)
         {
-            string storageConnectionString = Resources.ResourceManager.GetString("ConnectionString");
-            //string storageConnectionString = Resources.ResourceManager.GetString("EmulatorConnectionString"); // for Emulator
+            //string storageConnectionString = Resources.ResourceManager.GetString("ConnectionString");
+            string storageConnectionString = Resources.ResourceManager.GetString("EmulatorConnectionString"); // for Emulator
 
             CloudStorageAccount storageAccount;
             CloudStorageAccount.TryParse(storageConnectionString, out storageAccount);
