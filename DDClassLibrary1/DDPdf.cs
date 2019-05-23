@@ -25,7 +25,7 @@ namespace DDClassLibrary1
 
             // ページに文字列を描画します。
             g.DrawString("Hello, de:code 2019!" + Environment.NewLine + "from " + platformname,
-                new TextFormat() { Font = StandardFonts.Times, FontSize = 12 },
+                new TextFormat() { Font = StandardFonts.Helvetica, FontSize = 12 },
                 new PointF(72, 72));
 
             // メモリストリームに保存

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DDWinFormCoreApp1
+namespace DDWinFormApp1
 {
     public partial class Form1 : Form
     {
@@ -20,9 +20,9 @@ namespace DDWinFormCoreApp1
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            DDExcel.Create("Windows Forms App (.NET Core)");
+            DDExcel.Create("Windows Forms App (.NET Framework)");
 
-            DDPdf.Create("Windows Forms App (.NET Core)");
+            DDPdf.Create("Windows Forms App (.NET Framework)");
         }
     }
 }
