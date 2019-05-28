@@ -20,7 +20,7 @@ namespace DDClassLibrary1
             IWorksheet worksheet = workbook.Worksheets[0];
 
             // セル範囲を指定して文字列を設定
-            worksheet.Range["B2"].Value = "Hello de:code 2019";
+            worksheet.Range["B2"].Value = "Hello, de:code 2019";
             worksheet.Range["B3"].Value = "from " + platformname;
 
             // メモリストリームに保存
